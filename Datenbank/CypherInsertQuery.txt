@@ -1,0 +1,888 @@
+create // Characters with bounties & Crews 
+		
+// strawhat pirates
+(strawhatpirates:Crew {name: 'straw hat pirates', alias: 'strawhat pirates', ship: 'thousand sunny'}),
+(luffy:Character {name: 'monkey d. luffy', alias: 'luffy', epithet: "mugiwara no luffy", bounty: '3,000,000,000', type: 'pirate', dream: 'to become the pirate king', debut: 'chapter 1', position: 'captain'}),
+(zoro:Character {name: 'roronoa zoro', alias: 'zoro', epithet: "pirate hunter zoro", bounty: '1,111,000,000', type: 'pirate', dream: 'to become the strongest swordsman in the world', debut: 'chapter 3', position: 'first mate'}),
+(nami:Character {name: 'nami', alias: 'nami', epithet: "cat burglar", bounty: '366,000,000', type: 'pirate', dream: 'to draw the first world map', debut: 'chapter 8', position: 'navigator'}),
+(usopp:Character {name: 'usopp', alias: 'usopp',  epithet: "god usopp", bounty: '500,000,000', type: 'pirate', dream: 'to become a great warrior of the Sea', debut: 'chapter 23', position: 'gunner'}),
+(vinsmokesanji:Character {name: 'vinsmoke sanji', alias: 'sanji', epithet: "black leg", bounty: '1,032,000,000', type: 'pirate', dream: 'to find the all blue', debut: 'chapter 43', position: 'cook'}),
+(tonytonychopper:Character {name: 'tony tony chopper', alias: 'chopper', epithet: "cotton candy lover", bounty: '1,000', type: 'pirate', dream: 'to become a doctor who can cure all illnes', debut: 'chapter 134', position: 'doctor'}),
+(nicorobin:Character {name: 'nico robin', alias: 'robin', epithet: "devil child", bounty: '930,000,000', type: 'pirate', dream: 'to uncover the secrets of the void century', debut: 'chapter 114', position: 'historian'}),
+(franky:Character {name: 'franky', alias: 'franky', epithet: "iron man", bounty: '394,000,000', type: 'pirate', dream: 'to build his dream Ship and wants to sail the grand line.', debut: 'chapter 329', position: 'shipwright'}),
+(brook:Character {name: 'brook', alias: 'brook', epithet: "soul king", bounty: '383,000,000', type: 'pirate', dream: 'to reunite with laboon', debut: 'chapter 442', position: 'musician '}),
+(jinbei:Character {name: 'jinbei', alias: 'jinbei', epithet: "knight of the sea", bounty: '1,101,000,000', type: 'pirate', dream: 'to keep the promise with ace', debut: 'chapter 528', position: 'helmsman '}),
+
+(luffy)-[:LEADS]->(strawhatpirates),
+(luffy)-[:MEMBER_OF]->(strawhatpirates),
+(zoro)-[:MEMBER_OF]->(strawhatpirates),
+(nami)-[:MEMBER_OF]->(strawhatpirates),
+(vinsmokesanji)-[:MEMBER_OF]->(strawhatpirates),
+(tonytonychopper)-[:MEMBER_OF]->(strawhatpirates),
+(nicorobin)-[:MEMBER_OF]->(strawhatpirates),
+(franky)-[:MEMBER_OF]->(strawhatpirates),
+(jinbei)-[:MEMBER_OF]->(strawhatpirates),
+(brook)-[:MEMBER_OF]->(strawhatpirates),
+      	 
+// heart pirates
+(heartpirates:Crew {name: 'heart pirates', ship: 'polar tang'}),
+(trafalgarlaw:Character {name: 'trafalgar d. water law', alias: 'law', epithet: 'surgeon of death', bounty: '3,000,000,000', type: 'pirate'}),
+(bepo:Character {name: 'bepo', bounty: 'unknown', type: 'pirate'}),
+(shachi:Character {name: 'shachi', bounty: 'unknown', type: 'pirate'}),
+(penguin:Character {name: 'penguin', bounty: 'unknown', type: 'pirate'}),
+(mushroom:Character {name: 'mushroom', bounty: 'unknown', type: 'pirate'}),
+(honey:Character {name: 'honey', bounty: 'unknown', type: 'pirate'}),
+
+(trafalgarlaw)-[:LEADS]->(heartpirates),
+(trafalgarlaw)-[:MEMBER_OF]->(heartpirates),
+(bepo)-[:MEMBER_OF]->(heartpirates),
+(shachi)-[:MEMBER_OF]->(heartpirates),
+(penguin)-[:MEMBER_OF]->(heartpirates),
+(mushroom)-[:MEMBER_OF]->(heartpirates),
+(honey)-[:MEMBER_OF]->(heartpirates),
+
+
+// kid pirates
+(kidpirates:Crew {name: 'kid pirates', ship: 'victoria punk'}),
+(eustasskid:Character {name: 'eustass kid', bounty: '3,000,000,000', type: 'pirate'}),
+(killer:Character {name: 'killer', bounty: '1,032,000,000', type: 'pirate'}),
+(heat:Character {name: 'heat', bounty: 'unknown', type: 'pirate'}),
+(wire:Character {name: 'wire', bounty: 'unknown', type: 'pirate'}),
+
+(eustasskid)-[:LEADS]->(kidpirates),
+(eustasskid)-[:MEMBER_OF]->(kidpirates),
+(killer)-[:MEMBER_OF]->(kidpirates),
+(heat)-[:MEMBER_OF]->(kidpirates),
+(wire)-[:MEMBER_OF]->(kidpirates),
+       
+
+// red hair pirates
+(redhairpirates:Crew {name: 'red hair pirates', ship: 'red force'}),
+(shanks:Character {name: 'shanks', epithet: 'red-haired shanks', bounty: '4,048,900,000', type: 'pirate'}),
+(benn:Character {name: 'benn beckman', bounty: '650,000,000', type: 'pirate'}),
+(luckyroux:Character {name: 'lucky roux', bounty: 'unknown', type: 'pirate'}),
+(rockstar:Character {name: 'rockstar', bounty: 'unknown', type: 'pirate'}),
+(yasopp:Character {name: 'yasopp', bounty: 'unknown', type: 'pirate'}),
+(limejuice:Character {name: 'limejuice', bounty: 'unknown', type: 'pirate'}),
+(bonkpunch:Character {name: 'bonk punch', bounty: 'unknown', type: 'pirate'}),
+(monster:Character {name: 'monster', bounty: 'unknown', type: 'pirate'}),
+(buildingsnake:Character {name: 'building snake', bounty: 'unknown', type: 'pirate'}),
+(hongo:Character {name: 'hongo', bounty: 'unknown', type: 'pirate'}),
+(gab:Character {name: 'gab', bounty: 'unknown', type: 'pirate'}),
+
+(shanks)-[:LEADS]->(redhairpirates),
+(shanks)-[:MEMBER_OF]->(redhairpirates),
+(benn)-[:MEMBER_OF]->(redhairpirates),
+(luckyroux)-[:MEMBER_OF]->(redhairpirates),
+(rockstar)-[:MEMBER_OF]->(redhairpirates),
+(yasopp)-[:MEMBER_OF]->(redhairpirates),
+(limejuice)-[:MEMBER_OF]->(redhairpirates),
+(bonkpunch)-[:MEMBER_OF]->(redhairpirates),
+(monster)-[:MEMBER_OF]->(redhairpirates),
+(buildingsnake)-[:MEMBER_OF]->(redhairpirates),
+(hongo)-[:MEMBER_OF]->(redhairpirates),
+(gab)-[:MEMBER_OF]->(redhairpirates),
+(rockstar)-[:MEMBER_OF]->(redhairpirates),
+
+// blackbeard pirates
+(blackbeardpirates:Crew {name: 'blackbeard pirates', ship: 'saber of xebec'}),
+(teach:Character {name: 'marshall d. teach', epithet: 'blackbeard', bounty: '3,996,000,000', type: 'pirate'}),
+(jesus:Character {name: 'jesus burgess', bounty: 'unknown', type: 'pirate'}),
+(van:Character {name: 'van augur', bounty: '135,000,000', type: 'pirate'}),
+(avalo:Character {name: 'avalo pizarro', bounty: 'unknown', type: 'pirate'}),
+(laffitte:Character {name: 'laffitte', bounty: 'unknown', type: 'pirate'}),
+(shiryu:Character {name: 'shiryu of the rain', bounty: 'unknown', type: 'pirate'}),
+(catarina:Character {name: 'catarina devon', bounty: 'unknown', type: 'pirate'}),
+(sanjuan:Character {name: 'sanjuan wolf', bounty: 'unknown', type: 'pirate'}),
+(vasco:Character {name: 'vasco shot', bounty: 'unknown', type: 'pirate'}),
+(doc:Character {name: 'doc q', bounty: 'unknown', type: 'pirate'}),
+
+(teach)-[:LEADS]->(blackbeardpirates),
+(teach)-[:MEMBER_OF]->(blackbeardpirates),
+(jesus)-[:MEMBER_OF]->(blackbeardpirates),
+(van)-[:MEMBER_OF]->(blackbeardpirates),
+(avalo)-[:MEMBER_OF]->(blackbeardpirates),
+(laffitte)-[:MEMBER_OF]->(blackbeardpirates),
+(catarina)-[:MEMBER_OF]->(blackbeardpirates),
+(sanjuan)-[:MEMBER_OF]->(blackbeardpirates),
+(vasco)-[:MEMBER_OF]->(blackbeardpirates),
+(doc)-[:MEMBER_OF]->(blackbeardpirates),
+(shiryu)-[:MEMBER_OF]->(blackbeardpirates),	
+ 
+// roger pirates
+(rogerpirates:Crew {name: 'roger pirates', ship: 'oro jackson'}),
+(goldroger:Character {name: 'gol d. roger', alias: 'roger',  bounty: '5,564,800,000', type: 'pirate'}),
+(silvers:Character {name: 'silvers rayleigh', bounty: 'unknown', type: 'pirate'}),
+(scopper:Character {name: 'scopper gaban', bounty: 'unknown', type: 'pirate'}),
+(crocus:Character {name: 'crocus', bounty: 'unknown', type: 'pirate'}),
+
+(goldroger)-[:LEADS]->(rogerpirates),
+(goldroger)-[:MEMBER_OF]->(rogerpirates),
+(silvers)-[:MEMBER_OF]->(rogerpirates),
+(scopper)-[:MEMBER_OF]->(rogerpirates),
+(crocus)-[:MEMBER_OF]->(rogerpirates),
+
+// cross guild
+(buggy:Character {name: 'buggy', bounty: 3189000000, type: 'pirate'}),
+(crocodile:Character {name: 'crocodile', bounty: '1,965,000,000', type: 'pirate'}),
+(mihawk:Character {name: 'mihawk', bounty: '3,590,000,000', type: 'pirate'}),
+(dazbonez:Character {name: 'daz bonez', bounty: '75,000,000', type: 'pirate'}),
+(galdino:Character {name: 'galdino', bounty: '24,000,000', type: 'pirate'}),
+(alvida:Character {name: 'alvida', bounty: '5,000,000', type: 'pirate'}),
+(crossguild:Crew {name: 'cross guild'}),
+(buggy)-[:LEADS]->(crossguild),
+(crocodile)-[:LEADS]->(crossguild),
+(mihawk)-[:LEADS]->(crossguild),
+(crocodile)-[:MEMBER_OF]->(crossguild),
+(mihawk)-[:MEMBER_OF]->(crossguild),
+(dazbonez)-[:MEMBER_OF]->(crossguild),
+(galdino)-[:MEMBER_OF]->(crossguild),
+(alvida)-[:MEMBER_OF]->(crossguild),
+
+/// Big Mom Pirates
+(bigmompirates:Crew {name: 'big mom pirates'}),
+(bigmom:Character {name: 'big mom', type: 'pirate', bounty: '4,388,000,000'}),
+(katakuri:Character {name: 'katakuri', type: 'pirate', bounty: '1,057,000,000'}),
+(perospero:Character {name: 'perospero', type: 'pirate', bounty: '700,000,000'}),
+(cracker:Character {name: 'cracker', type: 'pirate', bounty: '890,000,000'}),
+(pudding:Character {name: 'pudding', type: 'pirate', bounty: '200,000,000'}),
+
+(bigmom)-[:LEADS]->(bigmompirates),
+(bigmom)-[:MEMBER_OF]->(bigmompirates),
+(katakuri)-[:MEMBER_OF]->(bigmompirates),
+(perospero)-[:MEMBER_OF]->(bigmompirates),
+(lafitte)-[:MEMBER_OF]->(bigmompirates),
+(cracker)-[:MEMBER_OF]->(bigmompirates),
+(pudding)-[:MEMBER_OF]->(bigmompirates),
+
+// Beast Pirates
+(beastpirates:Crew {name: 'beast pirates'}),
+(kaido:Character {name: 'kaido', type: 'pirate', bounty: '4,611,100,000'}),
+(queen:Character {name: 'queen', type: 'pirate', bounty: '1,320,000,000'}),
+(king:Character {name: 'king', type: 'pirate', bounty: '1,057,000,000'}),
+(jack:Character {name: 'jack', type: 'pirate', bounty: '1,000,000,000'}),
+(scratchmenapoo:Character {name: 'scratchmen apoo', type: 'pirate', bounty: '550,000,000'}),
+(duran:Character {name: 'duran', type: 'pirate', bounty: '320,000,000'}),
+(sukiyaki:Character {name: 'sukiyaki', type: 'pirate', bounty: '230,000,000'}),
+(x:Character {name: 'x', type: 'pirate', bounty: '200,000,000'}),
+
+(kaido)-[:LEADS]->(beastpirates),
+(queen)-[:MEMBER_OF]->(beastpirates),
+(king)-[:MEMBER_OF]->(beastpirates),
+(jack)-[:MEMBER_OF]->(beastpirates),
+(scratchmenapoo)-[:MEMBER_OF]->(beastpirates),
+(duran)-[:MEMBER_OF]->(beastpirates),
+(sukiyaki)-[:MEMBER_OF]->(beastpirates),
+(x)-[:MEMBER_OF]->(beastpirates),
+
+// marine
+(marine:Organization {name: 'marine'}),
+(sakazuki:Character {name: 'sakazuki', alias: 'akainu', role: 'fleet admiral', type: 'marine'}),
+(aramaki:Character {name: 'aramaki', role: 'admiral', type: 'marine'}),
+(issho:Character {name: 'issho', role: 'admiral', type: 'marine'}),
+(borsalino:Character {name: 'borsalino', alias: 'kizaru', role: 'admiral', type: 'marine'}),
+(garp:Character {name: 'monkey d. garp', alias: 'garp', role: 'vice admiral', type: 'marine'}),
+(koby:Character {name: 'koby', role: 'rear admiral', type: 'marine'}),
+(sengoku:Character {name: 'sengoku', role: 'inspector general', type: 'marine'}),
+(vegapunk:Character {name: 'dr. vegapunk', role: 'head scientist', type: 'marine'}),
+(sentomaru:Character {name: 'sentomaru', role: 'head scientist', type: 'marine'}),
+(drake:Character {name: 'x. drake', role: 'sword captain', type: 'marine'}),
+(smoker:Character {name: 'smoker', role: 'vice admiral', type: 'marine'}),
+(tashigi:Character {name: 'tashigi', role: 'captain', type: 'marine'}),
+(sakazuki)-[:LEADS]->(marine),
+
+// revolutionary army
+(revolutionaries:Organization {name: 'revolutionary army'}),
+(dragon:Character {name: 'monkey d. dragon', alias: 'dragon', bounty: 'unknown', role: 'supreme commander', type: 'revolutionary'}),
+(sabo:Character {name: 'sabo', bounty: '602,000,000', role: 'chief of staff', type: 'revolutionary'}),
+(ivankov:Character {name: 'emporio ivankov', bounty: 'unknown', role: 'commander g army', type: 'revolutionary'}),
+(karasu:Character {name: 'karasu', bounty: 'unknown', role: 'commander north army', type: 'revolutionary'}),
+(belo:Character {name: 'belo betty', bounty: 'unknown', role: 'commander east army', type: 'revolutionary'}),
+(morley:Character {name: 'morley', bounty: 'unknown', role: 'commander west army', type: 'revolutionary'}),
+(lindbergh:Character {name: 'lindbergh', bounty: 'unknown', role: 'commander south army', type: 'revolutionary'}),
+(kuma:Character {name: 'bartholomew kuma', bounty: 'unknown', role: 'officer', type: 'revolutionary'}),
+(windgranma: Ship {name: 'wind granma'}),
+(dragon)-[:LEADS]->(revolutionaries),
+(sabo)-[:MEMBER_OF]->(revolutionaries),
+(ivankov)-[:MEMBER_OF]->(revolutionaries),
+(karasu)-[:MEMBER_OF]->(revolutionaries),
+(belo)-[:MEMBER_OF]->(revolutionaries),
+(morley)-[:MEMBER_OF]->(revolutionaries),
+(lindbergh)-[:MEMBER_OF]->(revolutionaries),
+(kuma)-[:MEMBER_OF]->(revolutionaries),
+(windgranma)-[:belongs_to]->(revolutionaries),
+
+// world government
+(worldgovernment:Organization {name: 'world government'}),
+(fiveelders:Council {name: 'five elders'}),
+(im:Character {name: 'Im'}),
+(guernica:Character {name: 'guernica', type: 'secret agent'}),
+(joseph:Character {name: 'joseph', type: 'secret agent'}),
+(roblucci:Character {name: 'rob lucci', type: 'secret agent'}),
+(kaku:Character {name: 'kaku', type: 'secret agent'}),
+(stussy:Character {name: 'stussy', type: 'secret agent'}),
+(maha:Character {name: 'maha', type: 'secret agent'}),
+(im)-[:LEADS]->(worldgovernment),
+(fiveelders)-[:LEADS]->(worldgovernment),
+(fiveelders)-[:LEADS]->(marine),
+(fiveelders)-[:MEMBER_OF]->(worldgovernment),
+(guernica)-[:MEMBER_OF]->(worldgovernment),
+(roblucci)-[:MEMBER_OF]->(worldgovernment),
+(kaku)-[:MEMBER_OF]->(worldgovernment),
+(stussy)-[:MEMBER_OF]->(worldgovernment),
+
+// nine red scabbards
+(niners:Crew {name: 'nine red scabbards'}),
+(kin:Character {name: 'kinemon', alias: 'kin', type: 'samurai'}),
+(denjiro:Character {name: 'denjiro', type: 'samurai'}),
+(kikuono:Character {name: 'kikunojo', type: 'samurai'}),
+(raizo:Character {name: 'raizo', type: 'samurai'}),
+(inuarashi:Character {name: 'inuarashi', type: 'samurai', type: 'mink'}),
+(nekomamushi:Character {name: 'nekomamushi', type: 'samurai', type: 'mink'}),
+(kawamatsu:Character {name: 'kawamatsu', type: 'samurai'}),
+(ashura:Character {name: 'ashura doji', type: 'samurai'}),
+(kanjuro:Character {name: 'kanjuro', type: 'samurai'}),
+(momonosuke:Character {name: 'kozuki momonosuke', type: 'samurai'}),
+
+(momonosuke)-[:LEADS]->(niners),
+(kin)-[:LEADS]->(niners),
+(kin)-[:MEMBER_OF]->(niners),
+(denjiro)-[:MEMBER_OF]->(niners),
+(kikuono)-[:MEMBER_OF]->(niners),
+(raizo)-[:MEMBER_OF]->(niners),
+(inuarashi)-[:MEMBER_OF]->(niners),
+(nekomamushi)-[:MEMBER_OF]->(niners),
+(kawamatsu)-[:MEMBER_OF]->(niners),
+(ashura)-[:MEMBER_OF]->(niners),
+(kanjuro)-[:MEMBER_OF]->(niners),
+
+// Mink Tribe
+(minktribe:Organization {name: 'mink tribe'}),
+(carrot:Character {name: 'carrot', type: 'mink'}),
+(wanda:Character {name: 'wanda', type: 'mink'}),
+
+(inuarashi)-[:LEADS]->(minktribe),
+(nekomamushi)-[:LEADS]->(minktribe),
+(carrot)-[:MEMBER_OF]->(minktribe),
+(perospero)-[:MEMBER_OF]->(minktribe),
+(pudding)-[:MEMBER_OF]->(minktribe),
+(wanda)-[:MEMBER_OF]->(minktribe),
+
+// Ninja-Pirate-Mink-Samurai Alliance
+(npmsAlliance:Alliance {name: 'ninja-pirate-mink-samurai alliance'}),
+(heartpirates)-[:MEMBER_OF]->(npmsAlliance),
+(minktribe)-[:MEMBER_OF]->(npmsAlliance),
+(niners)-[:MEMBER_OF]->(npmsAlliance),
+(luffy)-[:LEADS]->(npmsAlliance),
+(trafalgarlaw)-[:LEADS]->(npmsAlliance),
+(inuarashi)-[:LEADS]->(npmsAlliance),
+(nekomamushi)-[:LEADS]->(npmsAlliance),
+(momonosuke)-[:LEADS]->(npmsAlliance),
+
+// Beasts and Big Mom Pirate Alliance
+(bbpAlliance:Alliance {name: 'beasts and big mom pirate alliance'}),
+(beastpirates)-[:MEMBER_OF]->(bbpAlliance),
+(bigmompirates)-[:MEMBER_OF]->(bbpAlliance),
+(kaido)-[:LEADS]->(bbpAlliance),
+(bigmom)-[:LEADS]->(bbpAlliance),
+		  
+// devil fruits
+(gomu:Devilfruit {name: 'gomu gomu no mi (hito hito no mi, model: nika)', fruittype: 'zoan'}),
+(doku:Devilfruit {name: 'doku doku no mi', fruittype: 'paramecia'}),
+(manei:Devilfruit {name: 'mane mane no mi', fruittype: 'paramecia'}),
+(hito:Devilfruit {name: 'hito hito no mi', fruittype: 'zoan'}),
+(hana:Devilfruit {name: 'hana hana no mi', fruittype: 'paramecia'}),
+(yomi:Devilfruit {name: 'yomi yomi no mi', fruittype: 'paramecia'}),
+(mera:Devilfruit {name: 'mera mera no mi', fruittype: 'logia'}),
+(goro:Devilfruit {name: 'goro goro no mi', fruittype: 'logia'}),
+(moku:Devilfruit {name: 'moku moku no mi', fruittype: 'logia'}),
+(gura:Devilfruit {name: 'gura gura no mi', fruittype: 'paramecia'}),
+(suna:Devilfruit {name: 'suna suna no mi', fruittype: 'logia'}),
+(pika:Devilfruit {name: 'pika pika no mi', fruittype: 'logia'}),
+(yuki:Devilfruit {name: 'yuki yuki no mi', fruittype: 'logia'}),
+(yami:Devilfruit {name: 'yami yami no mi', fruittype: 'logia'}),
+(mori:Devilfruit {name: 'mori mori no mi', fruittype: 'logia'}),
+(zushi:Devilfruit {name: 'zushi zushi no mi', fruittype: 'paramecia'}),
+(nomi:Devilfruit {name: 'nomi nomi no mi', fruittype: 'paramecia'}),
+(ope:Devilfruit {name: 'ope ope no mi', fruittype: 'paramecia'}),
+(jiki:Devilfruit {name: 'jiki jiki no mi', fruittype: 'paramecia'}),
+(bara:Devilfruit {name: 'bara bara no mi', fruittype: 'paramecia'}),
+(smile:Devilfruit {name: 'smile', fruittype: 'zoan'}),
+(neko:Devilfruit {name: 'neko neko no mi', fruittype: 'zoan'}),
+(ushi:Devilfruit {name: 'ushi ushi no mi', fruittype: 'zoan'}),
+(horu:Devilfruit {name: 'horu horu no mi', fruittype: 'paramecia'}),
+	 	 
+// four emporors
+(fouremperors:Fouremperors {name: 'four emperors'}),
+(luffy)-[:IS_A_EMP]->(fouremperors), 
+(shanks)-[:IS_A_EMP]->(fouremperors),
+(teach)-[:IS_A_EMP]->(fouremperors),
+(buggy)-[:IS_A_EMP]->(fouremperors),
+
+// haki
+(haoshoku:Haki { name: 'haoshoku', description: 'haoshoku haki is a rare form of haki that allows the user to exert their own willpower over others.
+this type of haki cannot be attained through training and only one in several million people are born with this ability.
+it is said that whoever possesses this type of haki has the qualities of a king, and are known as supreme rulers'}),
+
+(kenbunshoku:Haki { name: 'kenbunshoku', description: 'kenbunshoku haki is a form of haki that grants the user a sixth sense that allows them to sense the presence, 
+strength, and emotions of others, as well as gain limited precognitive abilities.
+in skypiea, kenbunshoku is known as mantra (心綱マントラ mantora?, literally meaning "mind rope")'}),
+
+(busoshoku:Haki { name: 'busoshoku', description: 'busoshoku haki is a form of haki that allows the user to use their own spiritual energy to create, in essence, an invisible armor around themself, 
+providing incredible offensive and defensive capabilities.notably, this form of haki can be used to injure devil fruit users that are otherwise immune to ordinary physical attacks, such as logia users.
+in wano country, busoshoku is known as ryuo (流桜 ryūō?, literally meaning "flowing sakura"), founded on the concept of inner flow.'}),
+
+//ponegylphs
+(historicalPoneglyph:Poneglyph {name: 'historical Poneglyph', description: 'reveals pieces of ancient history, as well as messages written by ancient people.'}),
+(instructionalPoneglyph:Poneglyph {name: 'instructional Poneglyph', description: 'contains instructions and/or clues about the Locations of historical Poneglyphs'}),
+(roadPoneglyph:Poneglyph {name: 'road Poneglyph', description: 'details a Location. the combined Locations detailed by all four road Poneglyphs allows one to locate laugh tale'}),
+
+// who ate which devil fruits
+(luffy)-[:ATE]->(gomu),
+(tonytonychopper)-[:ATE]->(hito),
+(teach)-[:ATE]->(yami),
+(teach)-[:ATE]->(gura),
+(nicorobin)-[:ATE]->(hana),
+(brook)-[:ATE]->(yomi),
+(issho)-[:ATE]->(zushi),
+(aramaki)-[:ATE]->(mori),
+(sengoku)-[:ATE]->(hito),
+(vegapunk)-[:ATE]->(nomi),
+(trafalgarlaw)-[:ATE]->(ope),
+(eustasskid)-[:ATE]->(jiki),
+(buggy)-[:ATE]->(bara),
+(crocodile)-[:ATE]->(suna),
+(killer)-[:ATE]->(smile),
+(sabo)-[:ATE]->(mera),
+(smoker)-[:ATE]->(moku),
+(roblucci)-[:ATE]->(neko),
+(kaku)-[:ATE]->(ushi),
+(ivankov)-[:ATE]->(horu),
+		
+// story Arc's
+(romancedawnArc:Arc {name: 'romance dawn', chapters: '1-7'}),
+(orangetownArc:Arc {name: 'orange town', chapters: '8-21'}),
+(syrupvillageArc:Arc {name: 'syrup village', chapters: '22-41'}),
+(baratieArc:Arc {name: 'baratie', chapters: '42-68'}),
+(arlongparkArc:Arc {name: 'arlong park', chapters: '69-95'}),
+(loguetownArc:Arc {name: 'loguetown', chapters: '96-100'}),
+(reversemountainArc:Arc {name: 'reverse mountain', chapters: '101-105'}),
+(whiskypeakArc:Arc {name: 'whisky peak', chapters: '106-114'}),
+(littlegardenArc:Arc {name: 'little garden', chapters: '115-129'}),
+(drumIslandArc:Arc {name: 'drum Island', chapters: '130-154'}),
+(alabastaArc:Arc {name: 'alabasta', chapters: '155-217'}),
+(jayaArc:Arc {name: 'jaya', chapters: '218-236'}),
+(skypieaArc:Arc {name: 'skypiea', chapters: '237-302'}),
+(longringArc:Arc {name: 'long ring long land', chapters: '303-321'}),
+(water7Arc:Arc {name: 'water seven', chapters: '323-374'}),
+(enieslobbyArc:Arc {name: 'enies lobby', chapters: '375-430'}),
+(postenieslobbyArc:Arc {name: 'post-enies lobby', chapters: '431-441'}),
+(thrillerbarkArc:Arc {name: 'thriller bark', chapters: '442-489'}),
+(sabaodyArchipelagoArc:Arc {name: 'sabaody archipelago', chapters: '490-513'}),
+(amazonlilyArc:Arc {name: 'amazon lily', chapters: '514-524'}),
+(impeldownArc:Arc {name: 'impel down', chapters: '525-549'}),
+(marinefordArc:Arc {name: 'marineford', chapters: '550-580'}),
+(postwarArc:Arc {name: 'post-war', chapters: '581-597'}),
+(returntosArc:Arc {name: 'return to sabaody archipelago', chapters: '598-602'}),
+(fishmanislandArc:Arc {name: 'fish-man Island', chapters: '603-653'}),
+(punkhazardArc:Arc {name: 'punk hazard', chapters: '654-699'}),
+(dressrosaArc:Arc {name: 'dressrosa', chapters: '700-801'}),
+(zouArc:Arc {name: 'zou', chapters: '802-824'}),
+(wholecakeiArc:Arc {name: 'whole cake Island', chapters: '825-902'}),
+(levelyArc:Arc {name: 'levely', chapters: '903-908'}),
+(wanokuniArc:Arc {name: 'wa no kuni', chapters: '909-1057'}),
+  
+// Saga's
+(eastblueSaga:Saga {name: 'east blue'}),
+(arabastaSaga:Saga {name: 'arabasta'}),
+(skyIslandaga:Saga {name: 'sky Island'}),
+(watersevenSaga:Saga {name: 'water seven'}),
+(thrillerbarkSaga:Saga {name: 'thriller bark'}),
+(sabaodyArchipelagoSaga:Saga {name: 'sabaody Archipelago'}),
+(fishmanIslandSaga:Saga {name: 'fish-man Island'}),
+(summitwarSaga:Saga {name: 'summit war'}),
+(dressrosaSaga:Saga {name: 'dressrosa'}),
+(wholecakeIslandaga:Saga {name: 'whole cake Island'}),
+(wanokuniSaga:Saga {name: 'wa no kuni'}),
+
+// which Arc is in which Saga
+(romancedawnArc)-[:is_in]->(eastblueSaga),
+(orangetownArc)-[:is_in]->(eastblueSaga),
+(syrupvillageArc)-[:is_in]->(eastblueSaga),
+(baratieArc)-[:is_in]->(eastblueSaga),
+(arlongparkArc)-[:is_in]->(eastblueSaga),
+(loguetownArc)-[:is_in]->(eastblueSaga),
+(reversemountainArc)-[:is_in]->(arabastaSaga),
+(whiskypeakArc)-[:is_in]->(arabastaSaga),
+(littlegardenArc)-[:is_in]->(arabastaSaga),
+(drumIslandArc)-[:is_in]->(arabastaSaga),
+(arabastaArc)-[:is_in]->(arabastaSaga),
+(jayaArc)-[:is_in]->(skyIslandaga),
+(skypieaArc)-[:is_in]->(skyIslandaga),
+(longringArc)-[:is_in]->(watersevenSaga),
+(water7Arc)-[:is_in]->(watersevenSaga),
+(enieslobbyArc)-[:is_in]->(watersevenSaga),
+(postenieslobbyArc)-[:is_in]->(watersevenSaga),
+(thrillerbarkArc)-[:is_in]->(thrillerbarkSaga),
+(sabaodyArchipelagoArc)-[:is_in]->(summitwarSaga),
+(amazonlilyArc)-[:is_in]->(summitwarSaga),
+(impeldownArc)-[:is_in]->(summitwarSaga),
+(marinefordArc)-[:is_in]->(summitwarSaga),
+(postwarArc)-[:is_in]->(summitwarSaga),
+(returntosArc)-[:is_in]->(fishmanIslandSaga),
+(fishmanislandArc)-[:is_in]->(fishmanIslandSaga),
+(punkhazardArc)-[:is_in]->(dressrosaSaga),
+(zouArc)-[:is_in]->(dressrosaSaga),
+(dressrosaArc)-[:is_in]->(dressrosaSaga),
+(wholecakeiArc)-[:is_in]->(arabastaSaga),
+(levelyArc)-[:is_in]->(wholecakeIslandaga),
+(wanokuniArc)-[:is_in]->(wanokuniSaga),
+	 
+// geology
+
+//red line
+(reversemountain: Location {name: 'reverse mountain'}),
+(twincape: Location {name: 'twin cape'}),
+(marygeoise: Location {name: 'mary geoise'}),
+(redport: Location {name: 'red port'}),
+
+// Seas
+(northblue: Sea {name: 'north blue'}),
+(eastblue: Sea {name: 'east blue'}),
+(westblue: Sea {name: 'west blue'}),
+(southblue: Sea {name: 'south blue'}),
+(grandline: Sea {name: 'grand line'}),
+(paradise: Sea {name: 'paradise'}), 
+(newworld: Sea {name: 'new world'}),
+(calmbelt: Sea {name: 'calm belt'}),
+	
+(paradise)-[:LOCATED_IN]->(grandline),
+(newworld)-[:LOCATED_IN]->(grandline),
+
+// Islands within east blue
+(dawnIsland: Island {name: 'dawn Island'}),
+(baratie: Island {name: 'baratie'}),
+(loguetown: Island {name: 'loguetown'}),
+(geckoIslands: Island {name: 'gecko Islands'}),
+(conomiIslands: Island {name: 'conomi Islands'}),
+
+// Islands within east blue (located in)
+(dawnIsland)-[:LOCATED_IN]->(eastblue),
+(baratie)-[:LOCATED_IN]->(eastblue),
+(loguetown)-[:LOCATED_IN]->(eastblue),
+(geckoIslands)-[:LOCATED_IN]->(eastblue),
+(conomiIslands)-[:LOCATED_IN]->(eastblue),
+
+// Islands within west blue
+(ohara: Island {name: 'ohara'}),
+(ilusia: Island {name: 'ilusia'}),
+(thrillerbark: Island {name: 'thriller bark'}),
+
+// Islands within west blue (located in)
+(ohara)-[:LOCATED_IN]->(westblue),
+(ilusia)-[:LOCATED_IN]->(westblue),
+(thrillerbark)-[:LOCATED_IN]->(westblue),
+
+// Islands within north blue
+(flevance: Island {name: 'flevance'}),
+(minionIsland: Island {name: 'minion Island'}),
+
+// Islands within north blue (located in)
+(flevance)-[:LOCATED_IN]->(northblue),
+(minionIsland)-[:LOCATED_IN]->(northblue),
+
+// Islands within south blue
+(torinokingdom: Island {name: 'torino kingdom'}),
+(baterilla: Island {name: 'baterilla'}),
+(blackdrumkingdom: Island {name: 'black drum kingdom'}),
+
+// Islands within south blue (located in)
+(torinokingdom)-[:LOCATED_IN]->(southblue),
+(baterilla)-[:LOCATED_IN]->(southblue),
+(blackdrumkingdom)-[:LOCATED_IN]->(southblue),
+
+// Islands within calm belt
+(amazonlily: Island {name: 'amazon lily'}),
+(impeldown: Island {name: 'impel down'}),
+(rusukaina: Island {name: 'rusukaina'}),
+
+// Islands within calm belt (located in)
+(amazonlily)-[:LOCATED_IN]->(calmbelt),
+(impeldown)-[:LOCATED_IN]->(calmbelt),
+(rusukaina)-[:LOCATED_IN]->(calmbelt),
+
+// Island within paradise
+(cactusIsland: Island {name: 'cactus island'}),
+(littlegarden: Island {name: 'little garden'}),
+(kyukaIsland: Island {name: 'kyuka Island'}),
+(drumIsland: Island {name: 'drum island'}),
+(nanimonaiIsland: Island {name: 'nanimonai island'}),
+(alabastakingdom: Island {name: 'alabasta kingdom'}),
+(jaya: Island {name: 'jaya'}),
+(longringlongland: Island {name: 'long ring long land'}),
+(water7: Island {name: 'water 7'}),
+(enieslobby: Island {name: 'enies lobby'}),
+(sanfaldo: Island {name: 'san faldo'}),
+(thefloriantrianglearea: Island {name: 'the florian triangle area'}),
+(sabaodyArchipelago: Island {name: 'sabaody Archipelago'}),
+(marineford: Island {name: 'marineford'}),
+(fishmanIsland: Island {name: 'fish-man island'}),
+(karakuriIsland: Island {name: 'karakuri island'}),
+(momoiroIsland: Island {name: 'momoiro island'}),
+(boinArchipelago: Island {name: 'boin Archipelago'}),
+(namakuraIsland: Island {name: 'namakura island'}),
+(kuraiganaIsland: Island {name: 'kuraigana island'}),
+(kenzanIsland: Island {name: 'kenzan island'}),
+(merveille: Island {name: 'merveille'}),
+(foolshoutIsland: Island {name: 'foolshout island'}),
+(banaroIsland: Island {name: 'banaro island'}),
+(vira: Island {name: 'vira'}),
+
+// Island within paradise (located in)
+(cactusIsland)-[:LOCATED_IN]->(paradise),
+(littlegarden)-[:LOCATED_IN]->(paradise),
+(kyukaIsland)-[:LOCATED_IN]->(paradise),
+(nanimonaiIsland)-[:LOCATED_IN]->(paradise),
+(alabastakingdom)-[:LOCATED_IN]->(paradise),
+(jaya)-[:LOCATED_IN]->(paradise),
+(longringlongland)-[:LOCATED_IN]->(paradise),
+(water7)-[:LOCATED_IN]->(paradise),
+(enieslobby)-[:LOCATED_IN]->(paradise),
+(sanfaldo)-[:LOCATED_IN]->(paradise),
+(thefloriantrianglearea)-[:LOCATED_IN]->(paradise),
+(sabaodyArchipelago)-[:LOCATED_IN]->(paradise),
+(marineford)-[:LOCATED_IN]->(paradise),
+(fishmanIsland)-[:LOCATED_IN]->(paradise),
+(karakuriIsland)-[:LOCATED_IN]->(paradise),
+(momoiroIsland)-[:LOCATED_IN]->(paradise),
+(boinArchipelago)-[:LOCATED_IN]->(paradise),
+(namakuraIsland)-[:LOCATED_IN]->(paradise),
+(kuraiganaIsland)-[:LOCATED_IN]->(paradise),
+(kenzanIsland)-[:LOCATED_IN]->(paradise),
+(merveille)-[:LOCATED_IN]->(paradise),
+(foolshoutIsland)-[:LOCATED_IN]->(paradise),
+(banaroIsland)-[:LOCATED_IN]->(paradise),
+(vira)-[:LOCATED_IN]->(paradise),
+
+// Island within new world
+(laughtale: Island {name: 'laugh tale'}),
+(lodestarIsland: Island {name: 'lodestar island'}),
+(wanokuni: Island {name: 'wa no kuni'}),
+(foodvalten: Island {name: 'foodvalten'}),
+(g5: Island {name: 'g-5'}),
+(newmarineford: Island {name: 'new marineford'}),
+(wholecakeIsland: Island {name: 'whole cake Island(totto land)'}),
+(raijinIsland: Island {name: 'raijin island'}),
+(riskyredIsland: Island {name: 'risky red island'}),
+(mystoriaIsland: Island {name: 'mystoria island'}),
+(dressrosa: Island {name: 'dressrosa'}),
+(zou: Island {name: 'zou'}),
+(prodencekingdom: Island {name: 'prodence kingdom'}),
+(mogarokingdom: Island {name: 'mogaro kingdom'}),
+(doerenakingdom: Island {name: 'doerena kingdom'}),
+(majiatsukakingdom: Island {name: 'majiatsuka kingdom'}),
+(applenineIsland: Island {name: 'applenine island'}),
+(karaibariIsland: Island {name: 'karai bari island'}),
+(broccoliIsland: Island {name: 'broc coli island'}),
+(germakingdom: Island {name: 'germa kingdom'}),
+(elbaf: Island {name: 'elbaf'}),
+(hachinosu: Island {name: 'hachinosu'}),
+(sphinx: Island {name: 'sphinx'}),
+(egghead: Island {name: 'egghead'}),
+(g14: Island {name: 'g-14'}),
+(winnerIsland: Island {name: 'winner island'}),
+
+// Island within new world (located in)	
+(laughtale)-[:LOCATED_IN]->(newworld),
+(lodestarIsland)-[:LOCATED_IN]->(newworld),
+(wanokuni)-[:LOCATED_IN]->(newworld),
+(foodvalten)-[:LOCATED_IN]->(newworld),
+(g5)-[:LOCATED_IN]->(newworld),
+(newmarineford)-[:LOCATED_IN]->(newworld),
+(wholecakeIsland)-[:LOCATED_IN]->(newworld),
+(raijinIsland)-[:LOCATED_IN]->(newworld),
+(riskyredIsland)-[:LOCATED_IN]->(newworld),
+(mystoriaIsland)-[:LOCATED_IN]->(newworld),
+(dressrosa)-[:LOCATED_IN]->(newworld),
+(zou)-[:LOCATED_IN]->(newworld),
+(prodencekingdom)-[:LOCATED_IN]->(newworld),
+(mogarokingdom)-[:LOCATED_IN]->(newworld),
+(doerenakingdom)-[:LOCATED_IN]->(newworld),
+(majiatsukakingdom)-[:LOCATED_IN]->(newworld),
+(applenineIsland)-[:LOCATED_IN]->(newworld),
+(karaibariIsland)-[:LOCATED_IN]->(newworld),
+(broccoliIsland)-[:LOCATED_IN]->(newworld),
+(germakingdom)-[:LOCATED_IN]->(newworld),
+(elbaf)-[:LOCATED_IN]->(newworld),
+(hachinosu)-[:LOCATED_IN]->(newworld),
+(sphinx)-[:LOCATED_IN]->(newworld),
+(egghead)-[:LOCATED_IN]->(newworld),
+(g14)-[:LOCATED_IN]->(newworld),
+(winnerIsland)-[:LOCATED_IN]->(newworld),
+
+// Most important plots
+
+// Romance Dawn Arc
+(luffygetshat:Event {description: 'luffy gets the straw hat from shanks '}),
+(setsSail:Event {description: 'luffy sets sail'}),
+(luffyeats:Event {description: 'luffy eats the gomu gomu no mi'}),
+(shankssavesluffy:Event {description: 'shanks saves luffy and lost his left arm'}),
+(zorojoined:Event {description: 'zoro joined the straw hat pirates'}),
+
+(luffygetshat)-[:OCCURS_IN]->(romancedawnArc),
+(setsSail)-[:OCCURS_IN]->(romancedawnArc),
+(luffyeats)-[:OCCURS_IN]->(romancedawnArc),
+(shankssavesluffy)-[:OCCURS_IN]->(romancedawnArc),
+(zorojoined)-[:OCCURS_IN]->(romancedawnArc),
+
+// Orange Town Arc
+(freedcocoyasi:Event {description: 'the straw hats freed the population of cocoyasi village'}),
+(namijoined:Event {description: 'nami joined the straw hat pirates'}),
+(defeatedbuggy:Event {description: 'the straw hats defeated buggy pirates'}),
+
+(freedcocoyasi)-[:OCCURS_IN]->(arlongparkArc),
+(namijoined)-[:OCCURS_IN]->(arlongparkArc),
+
+// Syrup Village Arc
+(usoppjoined:Event {description: 'usopp joined the straw hat pirates'}),
+
+(usoppjoined)-[:OCCURS_IN]->(baratieArc),
+
+// Baratie Arc
+(sanjijoined:Event {description: 'vinsmokesanji joined the straw hat pirates'}),
+(zoroloose:Event {description: 'zoro fights against the stronges swords man and looses'}),
+
+(sanjijoined)-[:OCCURS_IN]->(baratieArc),
+(zoroloose)-[:OCCURS_IN]->(baratieArc),
+
+// Arlong Park Arc
+(defeatedarlong:Event {description: 'the straw hats defeated arlong pirates'}),
+
+(defeatedarlong)-[:OCCURS_IN]->(arlongparkArc),
+
+// Logue Town Arc
+(luffyfirstbounty:Event {description: 'luffy gets his first bounty: 30,000,000'}),
+(luffyexecution:Event {description: 'buggy tries to execute luffy'}),
+(dragonsave:Event {description: 'monkey d. dragon saved luffy from smoker'}),
+
+(luffyfirstbounty)-[:OCCURS_IN]->(loguetownArc),
+(luffyexecution)-[:OCCURS_IN]->(loguetownArc),
+(dragonsave)-[:OCCURS_IN]->(loguetownArc),
+
+// Reverse Mountain Arc
+(laboonandcrocus:Event {description: 'straw hats meets laboon and crocus'}),
+(tothegrandline:Event {description: 'straw hats makes it to the grandline'}),
+
+(laboonandcrocus)-[:OCCURS_IN]->(reversemountainArc),
+(tothegrandline)-[:OCCURS_IN]->(reversemountainArc),
+
+// Whisky Peak Arc whiskypeakArc
+(vivibgeins:Event {description: 'vivi begins traveling with straw hats'}),
+(baroqueintroduced:Event {description: 'baroque works introduced, as well as nico robin as miss all sunday'}),
+
+(vivibgeins)-[:OCCURS_IN]->(whiskypeakArc),
+(baroqueintroduced)-[:OCCURS_IN]->(whiskypeakArc),
+
+// Little Garden Arc 
+(meetsgiants:Event {description: 'straw hats meets giants'}),
+(defeatedmr3:Event {description: 'the straw hats defeated mr. 3'}),
+
+(meetsgiants)-[:OCCURS_IN]->(littlegardenArc),
+(defeatedmr3)-[:OCCURS_IN]->(littlegardenArc),
+
+// Drum Island Arc 
+(chopperjoined:Event {description: 'chopper joined the straw hat pirates'}),
+(defeatedwapol:Event {description: 'the straw hats defeated wapol'}),
+
+(chopperjoined)-[:OCCURS_IN]->(drumIslandArc),
+(defeatedwapol)-[:OCCURS_IN]->(drumIslandArc),
+
+// Alabasta Arc
+(robinjoined:Event {description: 'robin joined the straw hat pirates'}),
+(defeatedbaroqueworks:Event {description: 'the straw hats defeated the baroque works'}),
+(freedalabasta:Event {description: 'the straw hats freed the population of alabasta'}),
+(strawhatsmeetsace:Event {description: 'the straw hats meets first time ace (luffys sworn brother)'}),
+
+(freedalabasta)-[:OCCURS_IN]->(alabastaArc),
+(robinjoined)-[:OCCURS_IN]->(alabastaArc),
+(defeatedbaroqueworks)-[:OCCURS_IN]->(alabastaArc),
+(strawhatsmeetsace)-[:OCCURS_IN]->(alabastaArc),
+
+//Jaya Arc
+(heardofnoland:Event {description: 'the straw hats heard of the tale of noland the liar'}),
+(strawhatsmeetsblackbeard:Event {description: 'the straw hats meets unknowingly blackbeard'}),
+(knockupstream:Event {description: 'the straw hats finds the knock up stream to skypiea'}),
+
+(heardofnoland)-[:OCCURS_IN]->(jayaArc),
+(strawhatsmeetsblackbeard)-[:OCCURS_IN]->(jayaArc),
+(knockupstream)-[:OCCURS_IN]->(jayaArc),
+
+// Skypiea Arc
+(defeatedenel:Event {description: 'the straw hats defeated enel'}),
+(freedskypiea:Event {description: 'the straw hats freed the population of skypiea'}),
+
+(defeatedenel)-[:OCCURS_IN]->(skypieaArc),
+(freedskypiea)-[:OCCURS_IN]->(skypieaArc),
+
+//Water 7 Arc
+(usoppbattlesluffy:Event {description: 'usopp battles luffy'}),
+(usoppleavecrew:Event {description: 'usopp leave the crew'}),
+(robindisappears: Event {description: 'robin disappears'}),
+
+(usoppbattlesluffy)-[:OCCURS_IN]->(water7Arc),
+(usoppleavecrew)-[:OCCURS_IN]->(water7Arc),
+(robindisappears)-[:OCCURS_IN]->(water7Arc),
+
+// Enies Lobby Arc
+(defeatedCP9:Event {description: 'the straw hats defeated the CP9'}),
+(declaredwar:Event {description: 'the straw hats declared war to the world government'}),
+(savedrobin:Event {description: 'the straw hats saved nico robin from the the world government'}),
+
+(defeatedCP9)-[:OCCURS_IN]->(enieslobbyArc),
+(declaredwar)-[:OCCURS_IN]->(enieslobbyArc),
+(savedrobin)-[:OCCURS_IN]->(enieslobbyArc),
+
+// Post Enies Lobby Arc postenieslobbyArc
+(frankyjoined:Event {description: 'franky joined the straw hat pirates'}),
+(meetsgarp:Event {description: 'the straw hats meets monkey d. garp (luffys grandfather)'}),
+
+(frankyjoined)-[:OCCURS_IN]->(postenieslobbyArc),
+(meetsgarp)-[:OCCURS_IN]->(postenieslobbyArc),
+
+// Thriller Bark Arc
+(brookjoined:Event {description: 'brook joined the straw hat pirates'}),
+(zorogetshusui:Event {description: 'zoro gets shusui sword from ryuma'}),
+
+(brookjoined)-[:OCCURS_IN]->(thrillerbarkArc),
+(zorogetshusui)-[:OCCURS_IN]->(thrillerbarkArc),
+
+// Sabaody Archipelago Arc 
+(luffypunches:Event {description: 'luffy punches a world noble'}),
+(strawhatsgotseperated: Event {description: 'straw hats got seperated because of bartholomew kuma'}),
+
+(luffypunches)-[:OCCURS_IN]->(sabaodyArchipelagoArc),
+(strawhatsgotseperated)-[:OCCURS_IN]->(sabaodyArchipelagoArc),
+
+// Amazonlily Arc 
+(luffymeetsboa:Event {description: 'luffy meets boa hancock'}),
+(luffyheardoface:Event {description: 'luffy heard that ace was defeated by blackbeard and is now in impel down'}),
+(boa:Event {description: 'boa hancock brings luffy to impel down'}),
+
+(luffymeetsboa)-[:OCCURS_IN]->(amazonlilyArc),
+(boa)-[:OCCURS_IN]->(amazonlilyArc),
+
+// Impel Down Arc
+(luffytriedtofreeace:Event {description: 'luffy tried to free ace from impel down'}),
+(jinbeipromise:Event {description: 'jinbei makes a promise to ace, that he will always protect luffy'}),
+
+(luffytriedtofreeace)-[:OCCURS_IN]->(impeldownArc),
+(jinbeipromise)-[:OCCURS_IN]->(impeldownArc),
+
+// Marine Ford Arc
+(executionoface:Event {description: 'the marine wants to execute ace'}),
+(marinefordwar:Event {description: 'Marine Ford War'}),
+(acedeath:Event {description: 'ace died by akainu'}),
+(whitebearddeath:Event {description: 'whitebeard died because he was too heavy wounded'}),
+(blackbeardstole:Event {description: 'blackbeard stole the devilfruit from whitebeard'}),
+(shanksstopswar:Event {description: 'shanks stops the war'}),
+
+(executionoface)-[:OCCURS_IN]->(marinefordArc),
+(marinefordwar)-[:OCCURS_IN]->(marinefordArc),
+(acedeath)-[:OCCURS_IN]->(marinefordArc),
+(whitebearddeath)-[:OCCURS_IN]->(marinefordArc),
+(blackbeardstole)-[:OCCURS_IN]->(marinefordArc),
+(shanksstopswar)-[:OCCURS_IN]->(marinefordArc),
+
+// Post War Arc 
+(flashback:Event {description: 'flashback: luffy, ace, and sabo become sworn brothers'}),
+(rayleightrainedluffy:Event {description: 'rayleigh the king of darkness (gol d. rogers right hand) trained luffy'}),
+
+(flashback)-[:OCCURS_IN]->(postwarArc),
+(rayleightrainedluffy)-[:OCCURS_IN]->(postwarArc),
+
+// Return to Sabaody Archipelago Arc
+(reunite:Event {description: 'the straw hats finally reunites'}),
+(reunite)-[:OCCURS_IN]->(returntosArc),
+
+// Fishman Island Arc 
+(freedfishman:Event {description: 'the straw hats freed the population of fishman island'}),
+(defeatednewfishman:Event {description: 'the straw hats defeated the new fish-Man pirates'}),
+(ldeclaredwarbm:Event {description: 'luffy declared war against big mom'}),
+
+(freedfishman)-[:OCCURS_IN]->(fishmanislandArc),
+(ldeclaredwarbm)-[:OCCURS_IN]->(fishmanislandArc),
+(defeatednewfishman)-[:OCCURS_IN]->(fishmanislandArc),
+
+// Punk Hazard Arc 
+(freedchildren:Event {description: 'the straw hats freed the children of in the lab'}),
+(sandhallied:Event {description: 'the straw hats and heart pirates allied'}),
+(meetskinemon:Event {description: 'the straw hats meets kinemon and momonosuke'}),
+
+(freedchildren)-[:OCCURS_IN]->(punkhazardArc),
+(sandhallied)-[:OCCURS_IN]->(punkhazardArc),
+(meetskinemon)-[:OCCURS_IN]->(punkhazardArc),
+
+// Dressrosa Arc
+(freeddressrosa:Event {description: 'the straw hats freed the population of dressrosa'}),
+(defeateddonquixotefamily:Event {description: 'the straw hats and heart pirates defeated the donquixote family'}),
+(destroyedsmile:Event {description: 'the straw hats and heart pirates destroyed the smile devilfruit production'}),
+(luffymeetssabo:Event {description: 'luffy meets sabo'}),
+
+(freeddressrosa)-[:OCCURS_IN]->(dressrosaArc),
+(defeateddonquixotefamily)-[:OCCURS_IN]->(dressrosaArc),
+(destroyedsmile)-[:OCCURS_IN]->(dressrosaArc),
+(luffymeetssabo)-[:OCCURS_IN]->(dressrosaArc),
+
+// Zou Arc 
+(freedzou:Event {description: 'the straw hats freed the population of zou'}),
+(roadponeglyphzou:Event {description: 'the straw hats found the first road poneglyph'}),
+(npmsalliancemade:Event {description: 'the ninja-pirate-mink-samurai alliance was made'}),
+(sanjileft:Event {description: 'sanji left the straw hats'}),
+
+(freedzou)-[:OCCURS_IN]->(zouArc),
+(npmsalliancemade)-[:OCCURS_IN]->(zouArc),
+(sanjileft)-[:OCCURS_IN]->(zouArc),
+
+// Whole Cake Island Arc 
+(weddingcrash:Event {description: 'the straw hats crashed the wedding'}),
+(freedsanji:Event {description: 'the straw hats freed sanji'}),
+(roadponeglyphwholecakeisland:Event {description: 'Brook was able to get a copy of Big Moms Road Poneglyph successfully'}),
+(luffyvskatakuri:Event {description: 'luffy fought against katakuri'}),
+
+(weddingcrash)-[:OCCURS_IN]->(wholecakeiArc),
+(freedsanji)-[:OCCURS_IN]->(wholecakeiArc),
+(brookponeglyph)-[:OCCURS_IN]->(wholecakeiArc),
+(luffyvskatakuri)-[:OCCURS_IN]->(wholecakeiArc),
+
+// Levely Arc  
+(throne:Event {description: 'the empty throne is revealed'}),
+(shanksspeaks:Event {description: 'Shanks is at Mary Geoise and he speaks to the Five Elders in person about a certain pirate'}),
+(imrevealed:Event {description: 'A mysterious figure known as Im is introduced'}),
+(strawhatchamber:Event {description: 'A straw hat is kept in a secret chamber in Mary Geoise, which Im has access to.'}),
+(bmpandbpallied:Event {description: 'Big Mom Pirates and Beast Pirates allied'}),
+(dragondeclareswar:Event {description: 'Dragon decides to declare war on the World Nobles during the Levely.'}),
+
+(throne)-[:OCCURS_IN]->(levelyArc),
+(shanksspeaks)-[:OCCURS_IN]->(levelyArc),
+(imrevealed)-[:OCCURS_IN]->(levelyArc),
+(strawhatchamber)-[:OCCURS_IN]->(levelyArc),
+(bmpandbpallied)-[:OCCURS_IN]->(levelyArc),
+(dragondeclareswar)-[:OCCURS_IN]->(levelyArc),
+
+//Wa no Kuni Arc 
+ 
+(jinbeijoined:Event {description: 'jinbei joined the straw hat pirates'}),
+(defeatedbmandbp:Event {description: 'the ninja-pirate-mink-samurai alliance defeated the big mom and beast pirates'}),
+(kandbdied:Event {description: 'kaido and big mom died'}),
+(freedwano:Event {description: 'the straw hats freed the population of wa no kuni'}),
+(laughtalerevealed:Event {description: 'revealed that the place/island where the one piece is, is called laugh tale because when gol d. roger saw it, he laughed'}),
+(roadponeglyhpwano:Event {description: 'Sukiyaki shows the Road Poneglyph to both Nico Robin and Trafalgar Law.'}),
+(shanksinterfere:Event {description: 'Shanks interfere with a burst of Haoshoku Haki directed at the Fleet Admiral Ryokugyu, which prompted him to retreat.'}),
+
+(jinbeijoined)-[:OCCURS_IN]->(wanokuniArc),
+(defeatedbmandbp)-[:OCCURS_IN]->(wanokuniArc),
+(kandbdied)-[:OCCURS_IN]->(wanokuniArc),
+(freedwano)-[:OCCURS_IN]->(wanokuniArc),
+(laughtalerevealed)-[:OCCURS_IN]->(wanokuniArc),
+(roadponeglyhpwano)-[:OCCURS_IN]->(wanokuniArc),
+(shanksinterfere)-[:OCCURS_IN]->(wanokuniArc)
