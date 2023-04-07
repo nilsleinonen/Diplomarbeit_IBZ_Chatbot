@@ -1,6 +1,4 @@
-# Diplomarbeit_IBZ_Chatbot
+Diploma thesis on the topic: Chatbot, which can answer questions about a series.
 
-Diplomarbeit mit dem Thema: Chatbot, welcher Fragen zu einer Serie beantworten kann.
+Tech Stack: Frontend: Flutter, Backend: ASP.NET, Database: Neo4j
 
-Tech Stack:
-Frontend: Flutter, Backend: ASP.NET, Datenbank: Neo4j
